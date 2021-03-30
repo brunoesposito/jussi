@@ -4,6 +4,9 @@ import { rgba } from 'polished';
 import { Props } from './types';
 
 export const ButtonStyle = styled.button<Props>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid
     ${(props) =>
       props.outline ? props.theme[props.background] : 'transparent'};
@@ -13,7 +16,6 @@ export const ButtonStyle = styled.button<Props>`
   border-radius: 6px;
   padding: 0 20px;
   height: 48px;
-  line-height: 48px;
 
   &:hover {
     border: 1px solid

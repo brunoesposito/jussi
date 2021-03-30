@@ -2,9 +2,10 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 
 import { Icon } from 'components';
+import { Container } from './styles';
 
 const Footer: FC = () => (
-  <div className="bg-black">
+  <Container className="bg-black">
     <div className="container d-flex justify-between">
       <Image src="/wppcompany.png" width={142} height={27} />
       <ul className="list-inline">
@@ -19,7 +20,7 @@ const Footer: FC = () => (
         </li>
       </ul>
     </div>
-  </div>
+  </Container>
 );
 
 export default Footer;

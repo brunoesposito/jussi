@@ -1,4 +1,6 @@
+import 'react-toastify/dist/ReactToastify.css';
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 
 import Head from 'next/head';
 import { NextPage } from 'next';
@@ -19,6 +21,7 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Component {...pageProps} />
+      <ToastContainer />
     </ThemeProvider>
   </>
 );

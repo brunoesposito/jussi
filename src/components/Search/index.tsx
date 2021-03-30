@@ -1,9 +1,8 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, FormEvent } from 'react';
 
-import Icon from '../Icon';
+import { Icon, Button } from 'components';
 import {
-  Box,
-  Button,
+  Form,
   Input,
   BoxResult,
   ResultCloseBg,
@@ -15,34 +14,29 @@ import { Props } from './types';
 
 const Search: FC<Props> = ({ placeholder = 'Digite aqui' }) => {
   const [text, setText] = useState('');
-  const [error, setError] = useState(false);
   const [modalResult, setModalResult] = useState(false);
 
   const toogleModalResult = () => setModalResult(!modalResult);
 
-  const getTextAndSearch = () => {
-    if (text) {
-      setError(false);
-      return toogleModalResult();
-    }
-
-    setError(true);
+  const sendTextToSearch = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toogleModalResult();
   };
 
   return (
     <>
-      <Box>
+      <Form className="d-flex justify-between" onSubmit={sendTextToSearch}>
         <Input
           type="text"
           placeholder={placeholder}
           value={text}
-          error={error}
+          required
           onChange={(e) => setText(e.target.value)}
         />
-        <Button onClick={getTextAndSearch}>
+        <Button type="submit" color="white" background="white" outline>
           <Icon name="search" alt={placeholder} />
         </Button>
-      </Box>
+      </Form>
       {modalResult && (
         <BoxResult>
           <ResultCloseBg onClick={toogleModalResult} />

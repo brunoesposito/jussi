@@ -1,33 +1,22 @@
 import styled from 'styled-components';
 import { rgba } from 'polished';
 
-import { InputProps } from './types';
-
-export const Box = styled.div`
-  position: relative;
+export const Form = styled.form`
   flex: 1;
-`;
-
-export const Input = styled.input<InputProps>`
-  width: 100%;
-  color: ${(props) => props.theme.secondary};
-  padding: 0 44px 0 20px;
-  border: 1px solid
-    ${(props) => (props.error ? props.theme.secondary : props.theme.grey)};
+  position: relative;
+  border: 1px solid ${(props) => props.theme.grey};
   border-radius: 24px;
-  height: 40px;
-  line-height: 40px;
+  padding: 0 0 0 20px;
   box-sizing: border-box;
 `;
 
-export const Button = styled.button`
-  position: absolute;
-  top: 50%;
-  right: 0;
+export const Input = styled.input`
+  width: 100%;
+  color: ${(props) => props.theme.secondary};
   border: 0;
-  padding: 0 10px;
-  background: transparent;
-  transform: translateY(-50%);
+  height: 40px;
+  line-height: 40px;
+  background-color: transparent;
 `;
 
 export const BoxResult = styled.div`
