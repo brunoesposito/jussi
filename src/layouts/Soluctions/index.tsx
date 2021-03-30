@@ -1,10 +1,30 @@
-import React, { FC } from 'react';
+import React, { FC, useRef, useState } from 'react';
 
-import { Title, Product } from 'components';
-import { Container, List, Itens } from './styles';
+import { Title, Product, Modal } from 'components';
+import { Container, List, Itens, ContentModal, TitleModal } from './styles';
 
 const Soluctions: FC = () => {
-  const productList: PropsProduct[] = [
+  const modalRef = useRef<PropsModal>(null);
+  const [modalContent, setModalContent] = useState<
+    Omit<PropsProduct, 'onClick'> | undefined
+  >();
+
+  const openProductDetail = ({
+    identification,
+    name,
+    description,
+    feature,
+  }: Omit<PropsProduct, 'onClick'>) => {
+    setModalContent({
+      identification,
+      name,
+      description,
+      feature,
+    });
+    modalRef.current.toogleModal();
+  };
+
+  const productList: Omit<PropsProduct, 'onClick'>[] = [
     {
       identification: 'P1',
       name: 'Nome do Produto #1',
@@ -42,10 +62,30 @@ const Soluctions: FC = () => {
               name={name}
               description={description}
               feature={feature}
+              onClick={() =>
+                openProductDetail({
+                  identification,
+                  name,
+                  description,
+                  feature,
+                })
+              }
             />
           </Itens>
         ))}
       </List>
+      <Modal ref={modalRef}>
+        <ContentModal className="d-flex justify-center flex-column text-center">
+          <TitleModal>{modalContent?.identification}</TitleModal>
+          <p className="text-secondary">{modalContent?.name}</p>
+          <p>{modalContent?.description}</p>
+          <ul className="list-inline justify-center">
+            {modalContent?.feature.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </ContentModal>
+      </Modal>
     </Container>
   );
 };

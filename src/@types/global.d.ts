@@ -3,4 +3,9 @@ declare type PropsProduct = {
   name: string;
   description: string;
   feature: string[];
+  onClick: () => void;
+};
+
+declare type PropsModal = {
+  toogleModal: () => void;
 };

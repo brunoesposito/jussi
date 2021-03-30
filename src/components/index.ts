@@ -4,3 +4,4 @@ export { default as Icon } from './Icon';
 export { default as Button } from './Button';
 export { default as Title } from './Title';
 export { default as Product } from './Product';
+export { default as Modal } from './Modal';

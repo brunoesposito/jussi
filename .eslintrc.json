@@ -86,6 +86,7 @@
     "jsx-a11y/anchor-is-valid": "off",
     "camelcase": "off",
     "consistent-return": "off",
-    "react/jsx-no-comment-textnodes": "off"
+    "react/jsx-no-comment-textnodes": "off",
+    "no-empty-pattern": "off"
   }
 }

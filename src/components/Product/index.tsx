@@ -15,6 +15,7 @@ const Product: FC<PropsProduct> = ({
   name,
   description,
   feature,
+  onClick,
 }) => (
   <Box>
     <Identification className="bg-grey text-center">
@@ -28,7 +29,7 @@ const Product: FC<PropsProduct> = ({
           <li key={item}>{item}</li>
         ))}
       </FeatureList>
-      <Button color="black" background="primary">
+      <Button onClick={onClick} color="black" background="primary">
         Ver solução
       </Button>
     </BoxInfo>
