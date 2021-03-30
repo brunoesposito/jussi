@@ -1,12 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Image from 'next/image';
 
-type Props = {
-  width?: number;
-  height?: number;
-};
+import { Props } from './types';
 
-const Brand: React.FC<Props> = ({ width = 184, height = 40 }) => (
+const Brand: FC<Props> = ({ width = 184, height = 40 }) => (
   <Image src="/brand.svg" alt="Jüssi" width={width} height={height} />
 );
 
