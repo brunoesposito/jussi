@@ -17,3 +17,15 @@ export const Input = styled.input`
   line-height: 40px;
   background-color: transparent;
 `;
+
+export const Link = styled.a`
+  background-color: ${(props) => props.theme.grey};
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: block;
+
+  p {
+    margin: 0;
+  }
+`;
