@@ -31,6 +31,10 @@ yarn dev -p {port}
 
 ## Performance
 
+|Mobile|Desktop|
+|:-------------:|:-------------:|
+|<img src="./public/readme/mobile.png" alt="jussi" width="200" />|<img src="./public/readme/desktop.png" alt="jussi" width="200" />|
+
 ## License
 
 MIT © [BrunoEsposito](https://github.com/brunoesposito)
