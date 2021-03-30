@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin: 65px auto;
+  padding-top: 65px;
+  padding-top: 65px;
 `;
 
 export const List = styled.div`

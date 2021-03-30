@@ -25,7 +25,7 @@ const Product: FC<PropsProduct> = ({
       <Description className="text-secondary">{description}</Description>
       <FeatureList>
         {feature.map((item) => (
-          <li>{item}</li>
+          <li key={item}>{item}</li>
         ))}
       </FeatureList>
       <Button color="black" background="primary">

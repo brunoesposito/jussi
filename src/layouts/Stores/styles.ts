@@ -16,3 +16,5 @@ export const Arrow = styled.span`
     display: none;
   }
 `;
+
+export const Link = styled.a``;

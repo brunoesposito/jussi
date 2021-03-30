@@ -29,7 +29,7 @@ export const BoxBrand = styled.div`
 
 export const Options = styled.div`
   @media (max-width: 992px) {
-    flex: 1;
+    width: 100%;
   }
 `;
 

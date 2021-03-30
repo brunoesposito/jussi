@@ -45,9 +45,9 @@ export const ResultContent = styled.div`
   height: 100vh;
   max-width: 800px;
   max-height: 300px;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;

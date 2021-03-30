@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 
 import { Title, Button } from 'components';
-import { Container, Content, Text, BoxImage } from './styles';
+import { Container, Content, Text, BoxImage, Link } from './styles';
 
 const About: FC = () => (
-  <Container>
+  <Container id="about-jussi">
     <div className="container d-flex justify-between">
       <Content>
         <Title>OLÁ, SOMOS A JÜSSI</Title>
@@ -21,7 +21,9 @@ const About: FC = () => (
         </Button>
       </Content>
       <BoxImage>
-        <Image src="/jussi.png" width={676} height={520} />
+        <Link href="http://jussi.com.br/" target="_blank">
+          <Image src="/jussi.png" width={676} height={520} />
+        </Link>
       </BoxImage>
     </div>
   </Container>

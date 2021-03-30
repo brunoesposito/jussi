@@ -42,3 +42,5 @@ export const BoxImage = styled.div`
     display: none;
   }
 `;
+
+export const Link = styled.a``;

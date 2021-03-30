@@ -36,10 +36,10 @@ const Header: FC = () => {
             </BoxBrand>
             <Menu className="list-inline">
               <li>
-                <Link href="/">Nossas soluções</Link>
+                <Link href="/#soluctions">Nossas soluções</Link>
               </li>
               <li>
-                <Link href="/">Conheça a Jüssi</Link>
+                <Link href="/#about-jussi">Conheça a Jüssi</Link>
               </li>
             </Menu>
           </div>
@@ -59,13 +59,10 @@ const Header: FC = () => {
         </div>
       </Container>
       {viewMobileMenu && (
-        <MenuMobile>
-          <MenuCloseBg onClick={toogleMobileMenu} />
+        <MenuMobile onClick={toogleMobileMenu}>
+          <MenuCloseBg />
           <MobileContent>
-            <MenuClose
-              className="d-flex justify-center"
-              onClick={toogleMobileMenu}
-            >
+            <MenuClose className="d-flex justify-center">
               <Icon
                 name="close"
                 alt="Fechar menu mobile"
@@ -77,10 +74,10 @@ const Header: FC = () => {
               <h3>Menu</h3>
               <ul>
                 <li>
-                  <Link href="/">Nossas soluções</Link>
+                  <Link href="/#soluctions">Nossas soluções</Link>
                 </li>
                 <li>
-                  <Link href="/">Conheça a Jüssi</Link>
+                  <Link href="/#about-jussi">Conheça a Jüssi</Link>
                 </li>
               </ul>
             </MobileOptions>
