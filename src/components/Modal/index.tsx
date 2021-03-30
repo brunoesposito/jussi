@@ -6,11 +6,17 @@ import React, {
 } from 'react';
 
 import { Icon } from 'components';
-import { BoxModal, ModalClose, ModalCloseBg, ModalContent } from './styles';
+import {
+  BoxModal,
+  ModalClose,
+  ModalCloseBg,
+  ModalContent,
+  Content,
+} from './styles';
 import { Props } from './types';
 
 const Modal: ForwardRefRenderFunction<PropsModal, Props> = (
-  { children },
+  { children, title },
   ref,
 ) => {
   const [visible, setVisible] = useState(false);
@@ -25,7 +31,7 @@ const Modal: ForwardRefRenderFunction<PropsModal, Props> = (
     visible && (
       <BoxModal>
         <ModalCloseBg onClick={toogleModal} />
-        <ModalContent>
+        <ModalContent className="d-flex flex-column">
           <ModalClose
             className="bg-secondary d-flex justify-center"
             onClick={toogleModal}
@@ -37,7 +43,8 @@ const Modal: ForwardRefRenderFunction<PropsModal, Props> = (
               height={15}
             />
           </ModalClose>
-          {children}
+          {title && <h2>{title}</h2>}
+          <Content>{children}</Content>
         </ModalContent>
       </BoxModal>
     )

@@ -26,7 +26,7 @@ export const ModalContent = styled.div`
   width: 90%;
   height: 100vh;
   max-width: 800px;
-  max-height: 300px;
+  max-height: 500px;
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
@@ -45,4 +45,13 @@ export const ModalClose = styled.div`
   width: 30px;
   height: 30px;
   cursor: pointer;
+`;
+
+export const Content = styled.div`
+  overflow: auto;
+  height: 100%;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 `;

@@ -17,10 +17,6 @@ const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => (
       <meta charSet="UTF-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="theme-color" content="#ffffff" />
-      <meta
-        name="google-site-verification"
-        content="Grzq8h_Gq7-8yfhfbwnpakbX0Mw2Hu1tiCJfeYvQYko"
-      />
     </Head>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
