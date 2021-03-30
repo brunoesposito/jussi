@@ -23,11 +23,11 @@ yarn dev -p {port}
 ```
 
 ## Technology
-[React JS](https://pt-br.reactjs.org/)
-[Next JS](https://nextjs.org/)
-[Styled Components](http://styled-components.com/)
-[Polished](https://polished.js.org/)
-[Toastify](https://fkhadra.github.io/react-toastify/introduction/)
+- [React JS](https://pt-br.reactjs.org/)
+- [Next JS](https://nextjs.org/)
+- [Styled Components](http://styled-components.com/)
+- [Polished](https://polished.js.org/)
+- [Toastify](https://fkhadra.github.io/react-toastify/introduction/)
 
 ## Performance
 
